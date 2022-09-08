@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-07T08:34:32.677Z</updated>
+  <updated>2022-09-08T09:45:53.592Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习手册</title>
+    <link href="http://example.com/2022/09/08/xue-xi-shou-ce/"/>
+    <id>http://example.com/2022/09/08/xue-xi-shou-ce/</id>
+    <published>2022-09-08T09:31:58.000Z</published>
+    <updated>2022-09-08T09:45:53.592Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;简要记录markdown常用语法格式，一看就会，一会就……会&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="markdown" scheme="http://example.com/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
