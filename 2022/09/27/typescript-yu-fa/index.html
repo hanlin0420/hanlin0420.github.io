@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>学习手册 | MyBlog</title>
+  <title>TypeScript语法 | MyBlog</title>
 
   <link rel="icon" type="image/jpeg" href="/medias/logo1.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -542,21 +542,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/medias/12.jpg')">
+  background-position: center center;position: relative;background-image:url('/medias/9.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        学习手册
+        TypeScript语法
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2022-09-08 |
+          <i class="fas fa-calendar"></i> 发表于：2022-09-27 |
         </span>
       
 
@@ -565,11 +565,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 719 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 1.1k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 2分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 5分钟 |
           </span>
   
           
@@ -596,114 +596,270 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <p>简要记录markdown常用语法格式，一看就会，一会就……会</p>
+        <p>近几年前端对 TypeScript的呼声越来越高，Typescript也成为了前端必备的技能。TypeScript 是 JS类型的超集，并支持了泛型、类型、命名空间、枚举等特性，弥补了 JS 在大型应用开发中的不足。</p>
 <span id="more"></span>
 
 
 
+<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3><ul>
+<li><p>TypeScript 是微软推出的开源语言，使用 Apache 授权协议（大厂出品，必属精品）</p>
+</li>
+<li><p>TypeScript是JavaScript的超集（即扩展了JavaScript）</p>
+</li>
+<li><p>TypeScript 增加了可选类型、类和模块，JavaScript是弱类型的，且没有命名空间</p>
+</li>
+<li><p>TypeScript 可编译成可读的、标准的 JavaScript</p>
+</li>
+<li><p>TypeScript 设计用于开发大型应用，并保证编译后的 JavaScript 代码兼容性</p>
+</li>
+<li><p>TypeScript 扩展了 JavaScript 的语法，因此已有的 JavaScript 代码可直接与 TypeScript 一起运行无需更改</p>
+</li>
+<li><p>TypeScript 文件扩展名是 ts，而 TypeScript 编译器会编译成 js 文件</p>
+</li>
+<li><p>TypeScript 语法与 Java逐渐类似，易学易于理解</p>
+</li>
+</ul>
+<h3 id="展开说说："><a href="#展开说说：" class="headerlink" title="展开说说："></a>展开说说：</h3><h4 id="编译时的强类型："><a href="#编译时的强类型：" class="headerlink" title="编译时的强类型："></a>编译时的强类型：</h4><p>当你申明变量的类型后，其他类型的赋值将会引起编译错误</p>
+<p><img src="/img/5a4c300254617.png" class="lazyload placeholder" data-srcset="/img/5a4c300254617.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p>TypeScript会对赋值的变量进行类型推断</p>
+<p><img src="/img/5a4c3025ed35e.png" class="lazyload placeholder" data-srcset="/img/5a4c3025ed35e.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化:"></a>模块化:</h4><p>利用TypeScript的关键词<code>module</code>，可以达到类似于命名空间的效果，而<code>export</code>可以控制是否被外部访问。</p>
+<p><img src="/img/5a4c313d6e76e.png" class="lazyload placeholder" data-srcset="/img/5a4c313d6e76e.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p>从以上例子可以看出：</p>
+<ol>
+<li>module可以嵌套，访问时用<code>.</code>作分隔符，也可以用<code>.</code>作为分隔符来简写<code>module</code>的嵌套；</li>
+<li>只有带关键词<code>export</code>的才可以被外部访问；</li>
+<li><code>module</code>可以合并，但是非<code>export</code>的对象在其他<code>module</code>下，即使是同一个名称，也不能被访问，如<code>funcA()</code>。</li>
+</ol>
+<h4 id="TypeScript基本语法"><a href="#TypeScript基本语法" class="headerlink" title="TypeScript基本语法:"></a>TypeScript基本语法:</h4><p>TypeScript的数据类型分为<code>Boolean</code>、<code>Number</code>、<code>String</code>、<code>Array</code>、<code>Enum</code>、<code>Any</code>、<code>Void</code>这七种类型。</p>
+<h5 id="Boolean类型"><a href="#Boolean类型" class="headerlink" title="Boolean类型"></a>Boolean类型</h5><p><img src="/img/5a4c323f17244.png" class="lazyload placeholder" data-srcset="/img/5a4c323f17244.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<h5 id="Number类型"><a href="#Number类型" class="headerlink" title="Number类型"></a>Number类型</h5><p><img src="/img/5a4c32c3557d0.png" class="lazyload placeholder" data-srcset="/img/5a4c32c3557d0.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<h5 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h5><p><img src="/img/5a4c334de0bf5.png" class="lazyload placeholder" data-srcset="/img/5a4c334de0bf5.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<h5 id="Array类型"><a href="#Array类型" class="headerlink" title="Array类型"></a>Array类型</h5><p><img src="/img/5a4c33e55eca9.png" class="lazyload placeholder" data-srcset="/img/5a4c33e55eca9.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<h5 id="Enum枚举类"><a href="#Enum枚举类" class="headerlink" title="Enum枚举类"></a>Enum枚举类</h5><p><img src="/img/5a4c364ec08ce.png" class="lazyload placeholder" data-srcset="/img/5a4c364ec08ce.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="typescript-8.png"></p>
+<h5 id="Any不确定类型"><a href="#Any不确定类型" class="headerlink" title="Any不确定类型"></a>Any不确定类型</h5><p><img src="/img/5a4c3b1132191.png" class="lazyload placeholder" data-srcset="/img/5a4c3b1132191.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="typescript-9.png"></p>
+<h5 id="Void类型"><a href="#Void类型" class="headerlink" title="Void类型"></a>Void类型</h5><p><img src="/img/5a4c3b63b7da6.png" class="lazyload placeholder" data-srcset="/img/5a4c3b63b7da6.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="typescript-10.png"></p>
+<h4 id="类"><a href="#类" class="headerlink" title="类:"></a>类:</h4><h5 id="基本语法："><a href="#基本语法：" class="headerlink" title="基本语法："></a>基本语法：</h5><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 通过class创建类</span>
+<span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 类的属性</span>
+    name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    <span class="token comment">// 类的构造器</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment">// 类的方法</span>
+    <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span><span class="token punctuation">&#123;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello animal:"</span><span class="token operator">+</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">// 实例化类</span>
+<span class="token keyword">var</span> tom <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token string">"tom"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+tom<span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
+<h5 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承:"></a>类的继承:</h5><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 通过class创建类</span>
+<span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 类的属性</span>
+    name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
 
-<h2 id="字体："><a href="#字体：" class="headerlink" title="字体："></a><em><strong>字体：</strong></em></h2><p>斜体：使用 * 号 或者 下划线 快捷键为 Command + i</p>
-<p><em>哈哈哈哈</em></p>
-<p>粗体：使用两个*号或者 两个下划线 快捷键为 Command + b</p>
-<p><strong>粗体哈哈哈哈哈</strong></p>
-<p>粗斜体：使用三个*号或者三个下划线 快捷键为 没有快捷键</p>
-<h2 id="各种线"><a href="#各种线" class="headerlink" title="各种线:"></a><em><strong>各种线:</strong></em></h2><p>分割线：三个 + 或者 - 或者 *，快捷键为 option + Command + -</p>
-<hr>
-<p>+++</p>
-<hr>
-<p>删除线：使用两个波浪号 ~~</p>
-<p><del>删除这句话</del></p>
-<p>下划线：<u></u>表示下划线，快捷键为Command+u</p>
-<p><u>哈哈哈哈</u></p>
-<h2 id="列表："><a href="#列表：" class="headerlink" title="列表："></a><em><strong>列表：</strong></em></h2><p>无序列表：可以使用<code>*</code>，<code>+</code>或<code>-</code>标记符号来表示无序列表项</p>
-<p>有序列表：可以使用<strong>数字加上<code>.</code>再加上空格</strong>来表示有序列表，数字并不重要</p>
-<p>嵌套列表：首先使用<code>*</code>、<code>+</code>或<code>-</code>进入列表，然后回车换行，会发现系统自动生成列表第二项，此时按下<strong>Tab</strong>键，列表第二项变为第一项的子列表。<strong>按回车退出当前列表</strong>。可以在无序列表中嵌套有序列表</p>
-<h2 id="区块："><a href="#区块：" class="headerlink" title="区块："></a><em><strong>区块：</strong></em></h2><p>可以使用<code>&gt;</code>加空格来表示区块</p>
-<blockquote>
-<p>2qqqq</p>
-<blockquote>
-<blockquote>
-<p>hhhh</p>
-<p>2222</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a><em><strong>代码：</strong></em></h2><p>一行代码使用 一对**&#96;**</p>
-<p><code>system.out.println(&quot;Hello World!&quot;)</code></p>
-<p>代码段，使用<strong>三个 &#96; 加Enter&#x2F;空格+编程语言</strong></p>
-<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;templet&gt;
-	&lt;p&gt;哈哈哈哈&lt;&#x2F;p&gt;
-&lt;&#x2F;templet&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+    <span class="token comment">// 类的构造器</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> statis <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    <span class="token comment">// 类的方法</span>
+    <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello animal:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 继承Animal</span>
+<span class="token keyword">class</span> <span class="token class-name">Cat</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 重写方法</span>
+    <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello cat:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello dog:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h2 id="链接："><a href="#链接：" class="headerlink" title="链接："></a><em><strong>链接：</strong></em></h2><p>两种表示方式： </p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url">[<span class="token content">链接描述</span>](<span class="token url">www.baidu.com</span>)</span>
-或者
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>www.baidu.com</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h5 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符:"></a>修饰符:</h5><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span> <span class="token comment">// 这里把name修饰符改为private</span>
 
-<p><a href="www.baidu.com">百度</a><br>或者<br>&lt;<a target="_blank" rel="noopener" href="http://www.baidu.com&gt;/">www.baidu.com&gt;</a></p>
-<p><a href="#%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C">跳转到标题</a></p>
-<h2 id="图片："><a href="#图片：" class="headerlink" title="图片："></a><em><strong>图片：</strong></em></h2><pre class="line-numbers language-none"><code class="language-none">![](图片地址)	图片地址可以为finder选择图片，也可以为网络图片地址。图片都将会被下载到文件同级文件夹.&#x2F;img中<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
-<p><img src="/img/wallhaven-672816.jpg" class="lazyload placeholder" data-srcset="/img/wallhaven-672816.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="wallhaven-672816"></p>
-<p><img src="/img/runoob-logo.png" class="lazyload placeholder" data-srcset="/img/runoob-logo.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="网络图片" title="菜鸟教程"></p>
-<h2 id="表格："><a href="#表格：" class="headerlink" title="表格："></a><em><strong>表格：</strong></em></h2><p>使用 <code>|</code> 来分隔不同的单元格，使用 <code>-</code> 来分隔表头和其他行</p>
-<p>快捷键为 option + Command + t</p>
-<pre class="line-numbers language-none"><code class="language-none">|aaa|bbb|ccc|
-|---|---|---|
-|a|b|c|<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+    <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello animal:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 
-<table>
-<thead>
-<tr>
-<th>aaa</th>
-<th align="left">bbb</th>
-<th>ccc</th>
-</tr>
-</thead>
-</table>
-<h2 id="数学公式："><a href="#数学公式：" class="headerlink" title="数学公式："></a><em><strong>数学公式：</strong></em></h2><p>过于复杂，且使用频率不高，跳过</p>
-<h2 id="HTML："><a href="#HTML：" class="headerlink" title="HTML："></a><em><strong>HTML：</strong></em></h2><p>字体：</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;font size&#x3D;3 color&#x3D;&quot;red&quot;&gt;红色，大小为3&lt;&#x2F;font&gt;
-&lt;font size&#x3D;4 color&#x3D;&quot;blue&quot;&gt;蓝色，大小为6&lt;&#x2F;font&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<span class="token keyword">class</span> <span class="token class-name">Cat</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello cat:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//这里会报错，因为无法引用父类private修饰的属性</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 
-<p><font size=3 color="red">红色，大小为3</font><br><font size=4 color="blue">蓝色，大小为6</font></p>
-<p>对齐方式：</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;p align&#x3D;&quot;left&quot;&gt;左对齐&lt;&#x2F;p&gt;
-&lt;p align&#x3D;&quot;center&quot;&gt;中间对齐&lt;&#x2F;p&gt;
-&lt;p align&#x3D;&quot;right&quot;&gt;右对齐&lt;&#x2F;p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello dog:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//这里会报错，因为无法引用父类private修饰的属性</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p align="left">左对齐</p>
-<p align="center">中间对齐</p>
-<p align="right">右对齐</p>
+<p>当把属性的修饰符改成私有时，子类继承以后便会报错。</p>
+<h5 id="Get-x2F-Set访问器"><a href="#Get-x2F-Set访问器" class="headerlink" title="Get&#x2F;Set访问器:"></a>Get&#x2F;Set访问器:</h5><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">get</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#123;</span> <span class="token comment">//通过get和set解决子类不能引用父类private修饰的属性的问题</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">set</span> <span class="token function">name</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello animal:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Cat</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello cat:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello dog:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<p>插入图像：</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;img src&#x3D;&quot;img&#x2F;runoob-logo.png&quot; width&#x3D;200 height&#x3D;30 style&#x3D;&quot;float:left&quot;&#x2F;&gt; <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="静态属性"><a href="#静态属性" class="headerlink" title="静态属性:"></a>静态属性:</h5><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">Table</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">static</span> width<span class="token operator">:</span> Number <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> height<span class="token operator">:</span> Number <span class="token operator">=</span> <span class="token number">50</span>
+<span class="token punctuation">&#125;</span>
 
-<p><img src="img/runoob-logo.png" class="lazyload placeholder" data-srcset="img/runoob-logo.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" width=30 height=30 style="float:left"/><img src="../../../../Documents/img/runoob-logo.png" class="lazyload placeholder" data-srcset="../../../../Documents/img/runoob-logo.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" width=200 height=30 style="float:left"/> </p>
-<h2 id="插入emoji表情："><a href="#插入emoji表情：" class="headerlink" title="插入emoji表情："></a><em><strong>插入emoji表情：</strong></em></h2><p>使用<code>:emoji:</code>的语法来插入表情</p>
-<p>:happy:的语法为<code>:happy:</code></p>
-<p>🦀的语法为<code>:crab:</code></p>
-<p>🐴的语法为<code>:horse:</code></p>
-<h2 id="插入目录："><a href="#插入目录：" class="headerlink" title="插入目录："></a><em><strong>插入目录：</strong></em></h2><p>文章添加标题后，可以在输入<code>[toc]</code>命令的位置自动根据标题生成目录</p>
-<h2 id="文本高亮："><a href="#文本高亮：" class="headerlink" title="文本高亮："></a><em><strong>文本高亮：</strong></em></h2><p>在Typora中，用<code>==</code>高亮文本</p>
-<p>&#x3D;&#x3D;高亮这段话&#x3D;&#x3D;</p>
+<span class="token keyword">var</span> width<span class="token operator">:</span> Number <span class="token operator">=</span> Table<span class="token punctuation">.</span>width<span class="token punctuation">;</span><span class="token comment">//类名直接引用</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="接口："><a href="#接口：" class="headerlink" title="接口："></a>接口：</h4><h5 id="基本语法：-1"><a href="#基本语法：-1" class="headerlink" title="基本语法："></a>基本语法：</h5><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">interface</span> <span class="token class-name">Graphic</span> <span class="token punctuation">&#123;</span>
+    width<span class="token operator">:</span> Number<span class="token punctuation">;</span>
+    height<span class="token operator">:</span> Number<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Square</span> <span class="token keyword">implements</span> <span class="token class-name">Graphic</span> <span class="token punctuation">&#123;</span>
+    width<span class="token operator">:</span> Number<span class="token punctuation">;</span>
+    height<span class="token operator">:</span> Number<span class="token punctuation">;</span>
+
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token function">constructor</span><span class="token punctuation">(</span>width<span class="token operator">:</span> Number<span class="token punctuation">,</span> height<span class="token operator">:</span> Number<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>height <span class="token operator">=</span> height<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>width <span class="token operator">=</span> width<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h5 id="继承接口"><a href="#继承接口" class="headerlink" title="继承接口:"></a>继承接口:</h5><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">interface</span> <span class="token class-name">Graphic</span> <span class="token punctuation">&#123;</span>
+    width<span class="token operator">:</span> Number<span class="token punctuation">;</span>
+    height<span class="token operator">:</span> Number<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">PenStroke</span> <span class="token punctuation">&#123;</span>
+    penWidth<span class="token operator">:</span> Number<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Square</span> <span class="token keyword">extends</span> <span class="token class-name">Graphic</span><span class="token punctuation">,</span> PenStroke <span class="token punctuation">&#123;</span>
+    sideLength<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="模块"><a href="#模块" class="headerlink" title="模块:"></a>模块:</h4><h5 id="模块的作用"><a href="#模块的作用" class="headerlink" title="模块的作用:"></a>模块的作用:</h5><ol>
+<li><p>防止命名空间冲突；</p>
+</li>
+<li><p>将一个功能模块很容易的划分到不同文件中，更容易维护。</p>
+</li>
+</ol>
+<h5 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法:"></a>基本语法:</h5><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">module</span> MyDemo<span class="token punctuation">&#123;</span>
+    <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">private</span> name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">get</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#123;</span> 
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token keyword">set</span> <span class="token function">name</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello animal:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Cat</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello cat:"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h5 id="别名"><a href="#别名" class="headerlink" title="别名:"></a>别名:</h5><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">module</span> Shapes <span class="token punctuation">&#123;</span>
+    <span class="token keyword">export</span> <span class="token keyword">module</span> Polygons<span class="token punctuation">&#123;</span>
+        <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Square</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+        <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Triangle</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">import</span> polygons <span class="token operator">=</span> Shapes<span class="token punctuation">.</span>Polygons<span class="token punctuation">;</span>
+<span class="token keyword">var</span> sq <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">polygons</span><span class="token punctuation">.</span><span class="token function">Square</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//类似于 new Shapes.Polygons.Square()</span>
+<span class="token keyword">var</span> sq1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Shapes</span><span class="token punctuation">.</span>Polygons<span class="token punctuation">.</span><span class="token function">Square</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数:"></a>函数:</h4><h5 id="基本语法-1"><a href="#基本语法-1" class="headerlink" title="基本语法:"></a>基本语法:</h5><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span>x<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span>y<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> x<span class="token operator">+</span>y<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">var</span> <span class="token function-variable function">myAdd</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>x<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span>y<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> x<span class="token operator">+</span>y<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/markdown/" class="">
-              markdown
+            <a href="/tags/typescript/" class="">
+              typescript
             </a>
           
         </div>
@@ -717,7 +873,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2022/09/08/xue-xi-shou-ce/" target="_blank" title="学习手册">http://example.com/2022/09/08/xue-xi-shou-ce/</a>
+    <a href="/2022/09/27/typescript-yu-fa/" target="_blank" title="TypeScript语法">http://example.com/2022/09/27/typescript-yu-fa/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -735,39 +891,30 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/9.jpg" class="lazyload placeholder" data-srcset="/medias/9.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-    </div>
-    <a href="/2022/09/27/typescript-yu-fa/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">TypeScript语法</div>
-      </div>
-      
-      <!-- <div class="content">
-        近几年前端对 TypeScript的呼声越来越高，Typescript也成为了前端必备的技能。TypeScript 是 
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/7.jpg" class="lazyload placeholder" data-srcset="/medias/7.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/12.jpg" class="lazyload placeholder" data-srcset="/medias/12.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/2022/09/07/hello-world/" class="post-nav-link">
+    <a href="/2022/09/08/xue-xi-shou-ce/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Hello World</div>
+        <div class="title-text">学习手册</div>
       </div>
       <!-- <div class="content">
-        Welcome to Hexo! This is your very first post. Check documen
+        简要记录markdown常用语法格式，一看就会，一会就……会
+
+
+
+
+
+
+
+
+字体：斜体：使用 * 号 或者 下划线 快
       </div> -->
     </a>
   </div>

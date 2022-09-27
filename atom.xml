@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-08T09:58:30.732Z</updated>
+  <updated>2022-09-27T10:00:32.539Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TypeScript语法</title>
+    <link href="http://example.com/2022/09/27/typescript-yu-fa/"/>
+    <id>http://example.com/2022/09/27/typescript-yu-fa/</id>
+    <published>2022-09-27T09:56:28.000Z</published>
+    <updated>2022-09-27T10:00:32.539Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;近几年前端对 TypeScript的呼声越来越高，Typescript也成为了前端必备的技能。TypeScript 是 JS类型的超集，并支持了泛型、类型、命名空间、枚举等特性，弥补了 JS 在大型应用开发中的不足。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="typescript" scheme="http://example.com/tags/typescript/"/>
+    
+  </entry>
   
   <entry>
     <title>学习手册</title>
