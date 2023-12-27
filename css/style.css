@@ -2530,6 +2530,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   width: 100%;
   height: 50vh;
   height: 60vh;
+  height: 100vh;
   overflow: hidden;
   background-size: cover;
   background-position: center center;
@@ -3160,7 +3161,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   width: 100%;
   height: 50vh;
   height: 60vh;
-  height: 100vh;
   overflow: hidden;
   background-size: cover;
   background-position: center center;
