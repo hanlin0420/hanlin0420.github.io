@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>清忧</title>
+  
+  <subtitle>路漫漫其修远兮，吾将上下而求索</subtitle>
+  <link href="https://hanlin0420.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://hanlin0420.github.io/"/>
+  <updated>2024-10-28T07:43:43.122Z</updated>
+  <id>https://hanlin0420.github.io/</id>
+  
+  <author>
+    <name>清忧</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://hanlin0420.github.io/2024/10/28/hello-world/"/>
+    <id>https://hanlin0420.github.io/2024/10/28/hello-world/</id>
+    <published>2024-10-28T07:43:43.122Z</published>
+    <updated>2024-10-28T07:43:43.122Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a class=&quot;link&quot;   href=&quot;https://hexo.io/&quot; &gt;Hexo&lt;i class=&quot;fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TypeScript语法</title>
+    <link href="https://hanlin0420.github.io/2022/09/27/typescript-yu-fa/"/>
+    <id>https://hanlin0420.github.io/2022/09/27/typescript-yu-fa/</id>
+    <published>2022-09-27T09:56:28.000Z</published>
+    <updated>2024-10-28T07:43:43.121Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;近几年前端对 TypeScript的呼声越来越高，Typescript也成为了前端必备的技能。TypeScript 是 JS类型的超集，并支持了泛型、类型、命名空间、枚举等特性，弥补了 JS 在大型应用开发中的不足。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="typescript" scheme="https://hanlin0420.github.io/tags/typescript/"/>
+    
+  </entry>
+  
+</feed>
